@@ -2,7 +2,7 @@
   ul.nav.nav-tabs
     li.active: a.btc-proof href="#btc-proof" data-toggle="tab" == t('.verify-btc')
     li:        a.ltc-proof href="#ltc-proof" data-toggle="tab" == t('.verify-ltc')
-    li:        a.ppc-proof href="#ppc-proof" data-toggle="tab" == t('.verify-ppc')
+    li:        a.ppc-proof href="#eth-proof" data-toggle="tab" == t('.verify-eth')
     li:        a.blk-proof href="#blk-proof" data-toggle="tab" == t('.verify-blk')
     li:        a.rpt-proof href="#rpt-proof" data-toggle="tab" == t('.verify-rpt')
     li:        a.trt-proof href="#trt-proof" data-toggle="tab" == t('.verify-trt')
@@ -26,13 +26,13 @@
           = @ltc_proof.sum
       = render 'liability_data', account: @ltc_account, proof: @ltc_proof
 
-    #ppc-proof.tab-pane.active: .trade-wrapper
+    #eth-proof.tab-pane.active: .trade-wrapper
       .assets
-        span.title = t('.ppc-assets-total')
+        span.title = t('.eth-assets-total')
         span.currency
-          == t("currency.icon.ppc")
+          == t("currency.icon.eth")
           = @ppc_proof.sum
-      = render 'liability_data', account: @ppc_account, proof: @ppc_proof
+      = render 'liability_data', account: @eth_account, proof: @eth_proof
 
     #blk-proof.tab-pane.active: .trade-wrapper
       .assets

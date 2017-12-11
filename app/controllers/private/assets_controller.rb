@@ -8,7 +8,7 @@ module Private
       @eur_assets  = Currency.assets('eur')
       @btc_proof   = Proof.current :btc
       @ltc_proof   = Proof.current :ltc
-      @ppc_proof   = Proof.current :ppc
+      @eth_proof   = Proof.current :eth
       @blk_proof   = Proof.current :blk
       @rpt_proof   = Proof.current :rpt
       @trt_proof   = Proof.current :trt
@@ -20,7 +20,7 @@ module Private
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
         @ltc_account = current_user.accounts.with_currency(:ltc).first
-        @ppc_account = current_user.accounts.with_currency(:ppc).first
+        @eth_account = current_user.accounts.with_currency(:eth).first
         @blk_account = current_user.accounts.with_currency(:blk).first
         @rpt_account = current_user.accounts.with_currency(:rpt).first
         @trt_account = current_user.accounts.with_currency(:trt).first
